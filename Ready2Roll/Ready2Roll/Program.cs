@@ -8,46 +8,36 @@ var input = Console.ReadLine();
 
 Console.WriteLine("     Hello, welcome to Ready to Roll");
 
-Console.WriteLine("How many dice would you like to roll?");
-Console.ReadLine();
-
-Console.WriteLine("How many sides do the dice have? 4, 6, 8, 10, 12, 20");
-Console.ReadLine();
-
-//Dice roll + adding 
-switch (input)
+//loop
+static void Main(string[] args);
 {
-    case "4":
+    var repeat = true;
+    while (repeat) ;
 
 
-    case "6":
+    Console.WriteLine("How many dice would you like to roll?");
+    int dice = int.Parse(Console.ReadLine());
+
+    Console.WriteLine("How many sides do the dice have? ");
+    int sides = int.Parse(Console.ReadLine());
 
 
-    case "8":
-
-
-    case "10":
-
+    //Dice roll + adding 
     
-    case "12":
+
+    // roll again or exit 
+
+    Console.WriteLine("Would you like to roll again? Press 1 for yes 2 to quit.");
+    Console.ReadLine();
+
+    switch (input)
+    {
+        case "1":
 
 
-    case "20":
+        case "2":
+            Console.WriteLine("Thank you for rolling!");
+            break;
+    }
 
-
-    default:
-        Console.WriteLine("Invalid choice, please select a type of die");
-        break;
-}
-
-
-//loop to roll again or exit 
-
-Console.WriteLine("Would you like to roll again? Press 1 for yes 2 to quit.");
-Console.ReadLine();
-
-switch (input)
-{
-    
-        
 }
