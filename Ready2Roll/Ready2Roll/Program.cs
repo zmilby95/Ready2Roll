@@ -1,30 +1,24 @@
 ﻿using System;
+using System.Runtime.Serialization.Formatters;
 using Ready2Roll;
 
 
 
-
-var input = Console.ReadLine();
-
-
 //introduction 
 
-Console.WriteLine("     Hello, welcome to Ready to Roll");
-
-
 //loop
-    static void Main(string[] args)
+    static void Main()
 {
-    List<Dice> dices = new List<Dice>();
+    Console.WriteLine("     Hello, welcome to Ready to Roll");
 
-    int dice = 0;
     do 
     {
-        if (dice == 0)
-        {
-            Console.WriteLine("How many dice would you like to roll? press 0 to quit");
-            dice = int.Parse(Console.ReadLine());
-        }
+        List<Dice> dices = new List<Dice>();
+
+        
+        Console.WriteLine("How many dice would you like to roll? press 0 to quit");
+        int dice = int.Parse(Console.ReadLine());
+        
 
         if (dice == 0)
         {
@@ -34,7 +28,7 @@ Console.WriteLine("     Hello, welcome to Ready to Roll");
 
         for (int i = 0; i < dice; i++)
         { 
-        Console.WriteLine("How many sides do the dice have? press 0 to quit");
+        Console.WriteLine("How many sides does the dice have? press 0 to quit");
         int sides = int.Parse(Console.ReadLine());
             if (sides <0)
             {
@@ -50,17 +44,28 @@ Console.WriteLine("     Hello, welcome to Ready to Roll");
             Dice die = new Dice();
             die.sides = sides;
             dices.Add(die);
+
+        }//Dice roll 
+
+        int roll = 0;
+        foreach (Dice die in dices)
+        {
+            int currentRoll = die.roll();
+            roll += currentRoll;
+            Console.WriteLine("The current roll was: " + currentRoll);
         }
-    } while (dice > 0);
+        Console.WriteLine("You rolled a total of: " + roll);
 
-    //Dice roll 
+    } while (false);
 
-    int roll = 0;
+    
+    
+      
+    // store the total for the day
 
-        // store the total for the day
-
-        dice--;
+       
 
 
     
 }
+Main();
