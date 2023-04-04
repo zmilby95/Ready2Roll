@@ -8,9 +8,9 @@ namespace Ready2Roll
 {
     public class Calculator
     {
-        public int Add(int first, int second)
+        public int Add(int x, int y)
         {
-            return first + second;
+            return x + y;
         }
     }
 }
