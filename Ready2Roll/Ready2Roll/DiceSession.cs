@@ -16,5 +16,9 @@ namespace Ready2Roll
         {
             date = DateTime.Now;
         }
+        public void displaySessionInfo() 
+        {
+            Console.WriteLine(date.ToString() + " Total of the roll: " + total);
+        }
     }
 }

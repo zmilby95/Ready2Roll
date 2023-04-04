@@ -3,16 +3,34 @@ using System.Runtime.Serialization.Formatters;
 using Ready2Roll;
 
 
+//sorts the List showing totals and tracking largest value 
 
-//introduction 
+static void ShowBestRolls(List<DiceSession> sessionList)
+{
+    sessionList.Sort((sessionA, sessionB) =>
+
+        sessionB.total.CompareTo(sessionA.total)
+    );
+    foreach (DiceSession session in sessionList)
+    {
+        session.displaySessionInfo();
+    }
+}
+
+
+
+static void Main()
+{//introduction
+ 
+    Console.WriteLine("     Hello, welcome to Ready to Roll");
+    List<DiceSession> sessionList = new List<DiceSession>();
 
 //loop
-    static void Main()
-{
-    Console.WriteLine("     Hello, welcome to Ready to Roll");
+    Boolean continueLoop = false;
 
     do 
     {
+        DiceSession session = new DiceSession();
         List<Dice> dices = new List<Dice>();
 
         
@@ -55,9 +73,24 @@ using Ready2Roll;
             Console.WriteLine("The current roll was: " + currentRoll);
         }
         Console.WriteLine("You rolled a total of: " + roll);
+        
+        session.diceList = dices;
+        session.total = roll;
+        sessionList.Add(session);
 
-    } while (false);
+        
+        Console.WriteLine("Would you like to roll another session? y/n");
+        string reroll = Console.ReadLine();
 
+        if (reroll == "y")
+        {
+            continueLoop = true;
+        } else
+        {
+           continueLoop = false;
+        }
+    } while (continueLoop);
+    ShowBestRolls(sessionList);
     
     
       
