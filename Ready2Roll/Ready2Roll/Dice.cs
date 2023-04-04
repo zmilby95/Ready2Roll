@@ -10,7 +10,7 @@ namespace Ready2Roll
     {
         public int sides;
         public int roll()
-        {
+        {//set up the roll to work with any number of sides
          Random random = new Random();
          return random.Next(1, sides + 1);
         }

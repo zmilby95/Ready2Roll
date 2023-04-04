@@ -11,7 +11,7 @@ namespace Ready2Roll
         public int total;
         public List<Dice> diceList;
         public DateTime date;
-
+        //created a list that will show the date and time and sort the rolls for the session 
         public DiceSession()
         {
             date = DateTime.Now;

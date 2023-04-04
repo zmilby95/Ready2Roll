@@ -29,11 +29,11 @@ static void Main()
     Boolean continueLoop = false;
 
     do 
-    {
+    {//created lists
         DiceSession session = new DiceSession();
         List<Dice> dices = new List<Dice>();
 
-        
+        //getting information about the roll from the player
         Console.WriteLine("How many dice would you like to roll? press 0 to quit");
         int dice = int.Parse(Console.ReadLine());
         
@@ -78,7 +78,7 @@ static void Main()
         session.total = roll;
         sessionList.Add(session);
 
-        
+        //loop to roll again
         Console.WriteLine("Would you like to roll another session? y/n");
         string reroll = Console.ReadLine();
 
@@ -90,11 +90,12 @@ static void Main()
            continueLoop = false;
         }
     } while (continueLoop);
+    //shows the list for the rolls 
     ShowBestRolls(sessionList);
     
     
       
-    // store the total for the day
+   
 
        
 
