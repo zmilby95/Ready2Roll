@@ -11,4 +11,4 @@ Ready2Roll is a dice rolling console app that allows the user to roll as many di
 3. Calculate and display the data based on the date and time
 
 # How to run
-Clone the repo, run program.cs, follow the prompt. The loop to roll again will keep going until n is typed when asked if you want to roll again. Once the user has decided to not roll again the date, time, and roll totals will list. 
+Clone the repo, run program.cs, follow the prompt. The program will ask you how many sides the dice has X amount of times where X is the number of dice that you want to roll. This feature lets every die selected have as many sides as you choose they do not have to all be the same.  The loop to roll again will keep going until n is typed when asked if you want to roll again. Once the user has decided to not roll again the date, time, and roll totals will list. 
