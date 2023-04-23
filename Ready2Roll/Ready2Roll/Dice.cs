@@ -15,5 +15,9 @@ namespace Ready2Roll
          return random.Next(1, sides + 1);
         }
     }
-
+    //lets the user roll twice keeping the higher score
+    public class AdvantageRoll : Dice
+    {
+        public int reroll;
+    }
 }
